@@ -36,5 +36,10 @@ jobs:
       - name: Build frontend assets
         run: npm run build
 
+      - name: Prepare application key
+        run: |
+          cp .env.example .env
+          php artisan key:generate --ansi
+
       - name: Run test suite
         run: php artisan test
