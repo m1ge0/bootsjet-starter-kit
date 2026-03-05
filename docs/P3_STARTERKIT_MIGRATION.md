@@ -5,7 +5,7 @@
 Transform `m1ge0/bootsjet` from a "swap package" (`bootsjet:swap`) into a Laravel Starter-Kit template that can be installed via:
 
 ```bash
-laravel new my-project --using=m1ge0/bootsjet
+laravel new my-project --using=m1ge0/bootsjet-starter-kit
 ```
 
 This requires shipping a complete project template (application skeleton), not only stubs plus an installer command.
@@ -169,13 +169,22 @@ Starter template `composer.json` should be project-oriented:
 1. Scaffold starter template repository/branch from Laravel 12 baseline.
 2. Apply mapping above (`stubs/*` into real template paths).
 3. Remove swap-package runtime classes from starter template.
-4. Update docs with `laravel new --using=m1ge0/bootsjet`.
+4. Update docs with `laravel new --using=m1ge0/bootsjet-starter-kit`.
 5. Add starter template CI (install + build + tests/smoke).
 6. Validate install path end-to-end on a clean machine.
 
 ## Definition of Done
 
-- `laravel new my-project --using=m1ge0/bootsjet` produces a ready Bootstrap/Jetstream/Livewire project.
+- `laravel new my-project --using=m1ge0/bootsjet-starter-kit` produces a ready Bootstrap/Jetstream/Livewire project.
 - No `bootsjet:swap` step required.
 - Welcome page, auth flow, profile, API tokens, and team screens render correctly.
 - Livewire 4 on Laravel 12 remains intact (no downgrade).
+
+## Current Status (March 2026)
+
+- Steps 1-5 are complete in `m1ge0/bootsjet-starter-kit`.
+- Step 6 was validated via:
+  - `laravel new bootsjet-starter-kit-e2e --using="https://github.com/m1ge0/bootsjet-starter-kit"`
+  - `composer validate --strict`
+  - `npm run build`
+  - `php artisan test`

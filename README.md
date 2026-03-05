@@ -42,4 +42,12 @@ php artisan test
 - [x] Applied Bootsjet stub-to-template mapping
 - [x] Updated docs for `laravel new --using=...`
 - [x] Added CI workflow for install/build/test smoke checks
-- [ ] End-to-end validation on a clean machine with global Laravel installer
+- [x] End-to-end validation with Laravel installer (`--using` from GitHub repository URL)
+
+## Clean-Machine Verification Checklist
+
+- [x] `laravel new bootsjet-starter-kit-e2e --using="https://github.com/m1ge0/bootsjet-starter-kit"`
+- [x] `composer validate --strict`
+- [x] `npm run build`
+- [x] `php artisan test`
+- [x] No application-level `resources/css/app.css` manifest dependency after scaffold
