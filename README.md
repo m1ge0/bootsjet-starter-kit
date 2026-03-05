@@ -4,11 +4,13 @@ Bootstrap-first Laravel 12 starter kit built on Jetstream (Livewire stack).
 
 ## Usage
 
+Requires publication on Packagist (and a stable tag such as `v1.0.0`) for the short package notation:
+
 ```bash
 laravel new my-project --using=m1ge0/bootsjet-starter-kit
 ```
 
-Alternative:
+Repository URL works immediately (recommended until Packagist publication is active):
 
 ```bash
 laravel new my-project --using="https://github.com/m1ge0/bootsjet-starter-kit"
